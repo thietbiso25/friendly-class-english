@@ -1,0 +1,16 @@
+{
+  "name": "friendly-class-english",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Friendly Class English - web tiếng Anh giao tiếp cho lớp chủ nhiệm",
+  "scripts": {
+    "dev": "LOCAL_STORE=1 ADMIN_PASSWORD=demo SESSION_SECRET=dev-secret node dev-server.js",
+    "build": "esbuild vendor-src/blob-client.js --bundle --minify --format=iife --outfile=public/blob-client.js"
+  },
+  "dependencies": {
+    "@vercel/blob": "^1.0.0",
+    "esbuild": "^0.25.0"
+  },
+  "engines": { "node": ">=20" }
+}
