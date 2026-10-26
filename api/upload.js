@@ -11,7 +11,7 @@ export default async function handler(req, res) {
       onBeforeGenerateToken: async () => {
         if (!isAdmin(req)) throw new Error('Cần đăng nhập giáo viên.');
         return {
-          allowedContentTypes: ['audio/*', 'video/*'],
+          allowedContentTypes: ['audio/*', 'video/*', 'image/*'],
           maximumSizeInBytes: 100 * 1024 * 1024,
           addRandomSuffix: true
         };
